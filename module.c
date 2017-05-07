@@ -109,12 +109,13 @@ static PyObject *pyyolo_test(PyObject *self, PyObject *args)
 	int i;
 
 	for (i = 0; i < num; i++) {
-		dict = Py_BuildValue("{s:s,s:i,s:i,s:i,s:i,s:}",
+		dict = Py_BuildValue("{s:s,s:i,s:i,s:i,s:i,s,f}",
 			"class", info[i]->name,
 			"left", info[i]->left,
 			"right", info[i]->right,
 			"top", info[i]->top,
-			"bottom", info[i]->bottom);
+			"bottom", info[i]->bottom
+			"conf", info[i]->conf);
 		PyList_SetItem(list, i, dict);
 		free(info[i]);
 	}
