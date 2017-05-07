@@ -111,7 +111,7 @@ static PyObject *pyyolo_test(PyObject *self, PyObject *args)
 	int i;
 
 	for (i = 0; i < num; i++) {
-		dict = Py_BuildValue("{s:s,s:i,s:i,s:i,s:i,s,f}",
+		dict = Py_BuildValue("{s:s,s:i,s:i,s:i,s:i,s:f}",
 			"class", info[i]->name,
 			"left", info[i]->left,
 			"right", info[i]->right,
