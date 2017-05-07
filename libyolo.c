@@ -100,7 +100,7 @@ detection_info **yolo_detect(yolo_handle handle, image im, float thresh, float h
 	clock_t time;
 	time=clock();
 	network_predict(obj->net, X);
-	printf("Cam frame predicted in %f seconds.\n", sec(clock()-time));
+	printf("hey, Cam frame predicted in %f seconds.\n", sec(clock()-time));
 
 	layer l = obj->net.layers[obj->net.n-1];
 	get_region_boxes(l, 1, 1, obj->net.w, obj->net.h, thresh, obj->probs, obj->boxes, 0, 0, hier_thresh, 0);  // get_region_boxes(l, 1, 1, thresh, obj->probs, obj->boxes, 0, 0, hier_thresh);
