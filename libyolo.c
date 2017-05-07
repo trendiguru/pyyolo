@@ -92,7 +92,7 @@ void yolo_cleanup(yolo_handle handle)
 
 detection_info **yolo_detect(yolo_handle handle, image im, float thresh, float hier_thresh, int *num)
 {
-    printf("yolo detect!!\n"");
+    printf("yolo detect!!\n");
 	yolo_obj *obj = (yolo_obj *)handle;
 	image sized = resize_image(im, obj->net.w, obj->net.h);
 
@@ -121,7 +121,7 @@ detection_info **yolo_detect(yolo_handle handle, image im, float thresh, float h
 
 detection_info **yolo_test(yolo_handle handle, char *filename, float thresh, float hier_thresh, int *num)
 {
-    printf("yolo test!!\n"");
+    printf("yolo test!!\n");
 	yolo_obj *obj = (yolo_obj *)handle;
 
 	char input[256];
