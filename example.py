@@ -2,7 +2,7 @@ import pyyolo
 import numpy as np
 import sys
 import cv2
-from cv2 import cv
+#from cv2 import cv #wtf is this for
 
 datacfg = 'cfg/coco.data'
 cfgfile = 'cfg/tiny-yolo.cfg'

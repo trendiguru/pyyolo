@@ -44,6 +44,7 @@ void get_detection_info(image im, int num, float thresh, box *boxes, float **pro
 			info->top = top;
 			info->bottom = bot;
 			info->conf = prob;
+			printf("get detection l %d r %d t %d b %d prob %f\n",left,right,top,bot,prob);
 			list_insert(output, info);
 		}
 	}
