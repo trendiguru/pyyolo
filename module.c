@@ -94,6 +94,8 @@ static PyObject *pyyolo_test(PyObject *self, PyObject *args)
 	float thresh;
 	float hier_thresh;
 
+    printf("module.c pyyolo_test\n");
+
 	if (!PyArg_ParseTuple(args, "sff", &filename, &thresh, &hier_thresh))
 		return NULL;
 
