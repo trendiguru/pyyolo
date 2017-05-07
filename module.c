@@ -116,7 +116,7 @@ static PyObject *pyyolo_test(PyObject *self, PyObject *args)
 			"left", info[i]->left,
 			"right", info[i]->right,
 			"top", info[i]->top,
-			"bottom", info[i]->bottom
+			"bottom", info[i]->bottom,
 			"conf", info[i]->conf);
 		PyList_SetItem(list, i, dict);
 		free(info[i]);
