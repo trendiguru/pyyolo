@@ -44,7 +44,7 @@ void get_detection_info(image im, int num, float thresh, box *boxes, float **pro
 			info->top = top;
 			info->bottom = bot;
 			info->conf = prob;
-			printf("get detection l %d r %d t %d b %d prob %f\n",left,right,top,bot,prob);
+		//	printf("get detection l %d r %d t %d b %d prob %f\n",left,right,top,bot,prob);
 			list_insert(output, info);
 		}
 	}
@@ -100,7 +100,7 @@ detection_info **yolo_detect(yolo_handle handle, image im, float thresh, float h
 	clock_t time;
 	time=clock();
 	network_predict(obj->net, X);
-	printf("hey, Cam frame predicted in %f seconds.\n", sec(clock()-time));
+	printf("Cam frame predicted in %f seconds.\n", sec(clock()-time));
 
 	layer l = obj->net.layers[obj->net.n-1];
 	get_region_boxes(l, 1, 1, obj->net.w, obj->net.h, thresh, obj->probs, obj->boxes, 0, 0, hier_thresh, 0);  // get_region_boxes(l, 1, 1, thresh, obj->probs, obj->boxes, 0, 0, hier_thresh);
@@ -121,7 +121,6 @@ detection_info **yolo_detect(yolo_handle handle, image im, float thresh, float h
 
 detection_info **yolo_test(yolo_handle handle, char *filename, float thresh, float hier_thresh, int *num)
 {
-    printf("yolo test!!\n");
 	yolo_obj *obj = (yolo_obj *)handle;
 
 	char input[256];
